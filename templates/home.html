@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Home page!!</p>
+<form method="post" action="{% url 'list' %}">
+    {% csrf_token %}
+<input type="text" placeholder="Search" required>
+<input type="submit" value="search">
+</form>
+<a href="{% url 'list' %}">list</a>
+<a href="{% url 'detail' %}">detail</a>
+</body>
+</html>
